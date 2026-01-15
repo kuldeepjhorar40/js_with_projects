@@ -1,2 +1,0 @@
-console.log("hello gord");
-console.log("hello dsdd");
