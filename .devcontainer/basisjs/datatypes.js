@@ -1,5 +1,5 @@
 // IMP NOTES :- *we use entre and ';' both as a line terminator we not use ';' mainly because it make diffuclty in code readability
-
+// js is dyanmically typed language 
 
 "use strict" // treat all Js code as newer version of js
 
@@ -20,3 +20,92 @@
  console.log(typeof "kuldeep") //string
   console.log(typeof null) // object 
    console.log(typeof undefined) // undefined
+
+
+// primitive
+/*
+ string ,
+ number(32 , 1000.3) ,
+ null ,
+ Boolean ,
+ undefined  ,
+ Bigint=342343534543545545n  , 
+ symbol->( id = symbol("123")),
+ object
+
+ */
+
+// reference type  -> non-primitive
+/*
+array  , -> (constarr = [1,2,3])
+ obejct  , - >(
+ let obj1 = {
+    name:"fr",
+    age:22,
+ }
+ )
+ function = (
+ const func = function(){
+    console.log("helo");
+ }
+ )
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
