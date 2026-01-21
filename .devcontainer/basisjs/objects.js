@@ -19,7 +19,7 @@ const obj = {
 
  }//this create literal , system treat key as string bydefault
 
-console.log(obj.id);//1
+console.log(obj.id);//1 
 /*
 console.log(obj.name);//error
 console.log(obj."name");//error
