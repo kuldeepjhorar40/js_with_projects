@@ -1,0 +1,10 @@
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}

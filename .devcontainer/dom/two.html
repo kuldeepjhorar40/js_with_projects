@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D0000M</title>
+</head>
+<body style="background-color:#3e3d3d">
+    <div class = "parent">
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THU</div>
+    </div>
+</body>
+<script>
+    const parent  = document.querySelector(".parent");
+        console.log(parent);/*
+        <div class="parent">
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THU</div>
+    </div>
+        */
+    console.log(parent.children);
+    /*HTMLCollection(4) [div.day, div.day, div.day, div.day]*/
+
+    console.log(parent.children[1]);
+    // <div class="day">TUE</div>
+    for (let index = 0; index < parent.children.length; index++) {
+        let c= `#${index+3}53121`;
+        parent.children[index].style.color = c;
+       console.log(parent.children[index].textContent);
+       console.log(c);
+        
+    }
+    
+</script>
+</html>
