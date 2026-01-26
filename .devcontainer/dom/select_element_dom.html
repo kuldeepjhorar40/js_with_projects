@@ -28,13 +28,17 @@
 
     console.log(parent.children[1]);
     // <div class="day">TUE</div>
-    for (let index = 0; index < parent.children.length; index++) {
-        let c= `#${index+3}53121`;
-        parent.children[index].style.color = c;
-       console.log(parent.children[index].textContent);
-       console.log(c);
-        
-    }
-    
+    [...parent.children].forEach((item)=> item.style.backgroundColor = "red");
+    for (let index = 0; index < parent.children.length; index++) {parent.children[index].style.color = "blue";}
+
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    const day = document.querySelector(".day");
+
+    console.log(day.parentElement);
+
+    console.log(day.nextElementSibling);
+
+    console.log(parent.childNodes);
 </script>
 </html>

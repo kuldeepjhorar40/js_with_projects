@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = " background-color: rgb(62, 56, 51);">
+    <ul class="all">
+        <li class="wonder">Taj Mahal</li>
+    </ul>
+</body>
+<script>
+    function add_wonder(name){
+        const new_list = document.createElement('li');
+        new_list.appendChild(document.createTextNode(`${name}`));
+        new_list.className=`wonder`;
+        document.querySelector(".all").appendChild(new_list);
+    }//optimize method is appendchild not innerText = "xyz";
+    
+    const allwonder =  [
+  "Great Wall of China",
+  "Petra",
+  "Christ the Redeemer",
+  "Machu Picchu",
+  "Chichen Itza",
+  "Colosseum"];
+
+  for (let index = 0; index < allwonder.length; index++) {
+    add_wonder(allwonder[index]);    
+  }
+
+
+  const remove1 = document.querySelector('.wonder:last-child').remove();
+  const remove2 = document.querySelector('li:first-child').remove();
+  const remove3 = document.querySelector('.wonder:nth-child(3)').remove();
+  const edit = document.querySelector('.wonder:last-child').outerHTML = "<li>ITZZAA</li>";
+  const new_list = document.createElement('li');
+  new_list.appendChild(document.createTextNode("TAAJ = MAHAAL"));
+  new_list.className=`wonder`;
+  const edit1 = document.querySelector('.wonder:first-child').replaceWith(new_list);
+
+</script>
+</html>
