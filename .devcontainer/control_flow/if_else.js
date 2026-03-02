@@ -19,9 +19,9 @@ if(Object.keys(obj1).length === 0 ){}//here object.key create a array of keys of
 // nullish coalescing operator(??) : null undefined
 
 
-// ans = null??15//15
-// ans =1??null//1
-// ans = undefined??13 //13
-// ans  = null??12??17//12 first value priority
+// ans = null??15            //15
+// ans =1??null             //1
+// ans = undefined??13     //13
+// ans  = null??12??17    //12 first value priority
 
 console.log(ans);
