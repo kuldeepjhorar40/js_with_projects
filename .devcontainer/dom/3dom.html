@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black ; color : white;">
+    <script>
+        el = document.createElement("h1");
+        console.log(el);
+        el.className = "div1";
+        el.id = Math.floor(Math.random()*10+1);
+        el.innerText = "newdiv";
+        text = document.createTextNode("new div11");
+        el.appendChild(text);
+        el.style.color = "blue";
+        el.style.backgroundColor = "green";
+        document.body.appendChild(el);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black ; color : white;">
+    <div class="prnt">
+        <div class="cild">day 1</div>
+        <div class="cild">day 2</div>
+        <div class="cild">day 3</div>
+        <div class="cild">day 4</div>
+
+    </div>
+    <script>
+        parent1 = document.querySelector(".prnt");
+        childAll = document.querySelectorAll(".cild");
+        console.log(parent1);
+        console.log("-------------------------------------------------------------");
+        console.log(childAll);
+        console.log("-------------------------------------------------------------");
+        console.log(parent1.children);
+        console.log("-------------------------------------------------------------");
+        console.log(parent1.firstElementChild);
+        console.log("-------------------------------------------------------------");
+        console.log(parent1.lastElementChild);
+        console.log("-------------------------------------------------------------");
+        console.log(childAll[0].parentElement);
+        console.log("-------------------------------------------------------------");
+        console.log(childAll[2].nextElementSibling);
+        console.log("-------------------------------------------------------------");
+        console.log("NODES : " , 
+            parent1.childNodes
+        );
+        console.log("-------------------------------------------------------------");
+        
+        
+        
+        for(let i = 0 ; i < parent1.children.length ; i++){
+            parent1.children[i].style.color = "blue";
+        }
+
+        
+
+    </script>
+</body>
+</html>
