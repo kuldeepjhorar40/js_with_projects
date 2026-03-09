@@ -1,1 +1,54 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body body style="background-color: rgb(43, 36, 36) ; color : white;">
+    <div class="main">
+        <form id = "form1">
+        <H1>BMI INDEX</H1>
+        <h4>ENTRE YOUR HEIGHT IN KG'S</h4>
+        <input type="text" class="height">
+        <h4>ENTRE YOUR WEIGHT IN M'S<h4>
+        <input type="text" class="weight">
+        <BR><BR>
+        <BUTTON TYPE = "submit">CALCULATE</BUTTON>
+        <h1 id = "result"></h1>
+        </form>
+
+    </div>
+    <SCRIPT>
+        el = document.querySelector("form");
+        el.addEventListener("submit" , function (e){
+            e.preventDefault();//use to pause until user submit
+            height = parseInt(document.querySelector(".height").value);
+            weight = parseInt(document.querySelector(".weight").value);
+            result = (document.querySelector("#result"));
+            if(height === '' || height<0 || isNaN(height)){
+                result.textContent = `please enter a valid height . you enter ${height} in input`;
+                
+            }
+            if(weight === '' || weight<0 || isNaN(weight)){
+                result.textContent = `please enter a valid weight . you enter ${weight} in input`;
+                
+            }
+            else{
+                result.style.color = "green";
+                result.style.backgroundColor = "red";
+                cal = (weight / (height*height));
+                result.textContent = cal;
+                if(cal<16){console.log("less than bmi")}
+                else if(cal===16){console.log("equal  to bmi");}
+                else{
+                    console.log("greator to bmi");
+                }
+                
+            }
+            
+        } )
+    </SCRIPT>
+</body>
+    
+</html>
