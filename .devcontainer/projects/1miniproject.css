@@ -1,0 +1,21 @@
+.btn{
+    width: 200px;
+    height: 200px;
+    margin:10px;
+}
+#grey{
+    background-color: grey;
+}
+#black{
+    background-color: rgb(72, 68, 68);
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+.main{
+    position:relative;
+    
+}

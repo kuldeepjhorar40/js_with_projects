@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black ; color : white;">
+    <div class="d1">
+        <ul class="lang">
+            <!-- <li class="l1"></li> -->
+        </ul>
+    </div>
+    <script>
+        function addlanguage(langName){
+            el = document.createElement('li');
+            el.appendChild(document.createTextNode(langName));
+            el.className = "li1";
+            el.style.color = "red";
+            el.style.padding = "20px";
+            el.style.margin = "10px";
+            el.style.backgroundColor = "black";
+            document.querySelector(".lang").appendChild(el);
+        }
+        const arr  = ['py' , 'cpp' , 'js' , 'java'];
+        for(let  i =  0 ; i < arr.length ; i++){
+            addlanguage(arr[i]);
+        }
+
+        //----edit element -----
+        el  = document.querySelectorAll(".li1");
+        el[1].textContent= "c++";
+
+        //  or
+        el  = document.querySelectorAll(".li1");
+        newel= document.createElement('li');
+        newel.appendChild(document.createTextNode("javascript"));
+        newel.className = "li1";
+        el[2].replaceWith(newel);
+
+        //----- remove element-----
+        el  = document.querySelectorAll(".li1");
+        newel= document.createElement('li');
+        el[2].remove();
+
+
+
+
+    </script>
+</body>
+</html>

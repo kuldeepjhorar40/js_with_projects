@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1miniproject.css">
+</head>
+<body style="background-color: rgb(43, 36, 36) ; color : white;">
+    <div class="main">
+        <button class="btn" id = "yellow">yellow</button>
+        <button class="btn" id="red"> red</button>
+        <button class="btn" id ="black">black</button>
+        <button class="btn" id="grey">grey</button>
+    </div>
+    <script>
+         btns = document.querySelectorAll(".btn");
+         btns.forEach(function(button){
+            button.addEventListener('click',function(ev){
+                body1  = document.querySelector("body");
+                body1.style.backgroundColor = button.id;               
+            })
+         })
+         
+    </script>
+</body>
+</html>
