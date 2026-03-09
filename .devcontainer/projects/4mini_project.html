@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body body style="background-color: rgb(43, 36, 36) ; color : white;">
+    <div class="main">
+        <h1>Guess the Number</h1>
+        <p>TRY AND GUESSS NUMBER 1 TO 100 IN 10 ATTEMPTS</p>
+        <H3>ENTRE YOUR NUMBER</H3>
+        <input type="text" class="num">
+        <button class="submitBtn">SUBMIT</button>
+        <h3>Previous Gusses : [ <span class="gusses">  </span> ] </h3>
+        <h3>Remanining Attempt : <span class="remain"></span> </h3>
+        <h1 class="result"></h1>
+    </div>
+    <script>
+        input_tab = document.querySelector(".num");
+        remaining = document.querySelector(".remain");
+        gusses = document.querySelector(".gusses");
+        submitBtn = document.querySelector(".submitBtn");
+        result = document.querySelector(".result");
+        let randNum = Math.floor(Math.random()*100+1);
+        let attempt = 10;
+        let match = 0;
+        
+        submitBtn.addEventListener("click",function(submitEvent){
+            submitEvent.preventDefault();
+            remaining.innerText = attempt;
+            let number = parseInt(input_tab.value);
+            if( number<0 || number>100 || isNaN(number)){
+                result.innerText = `Please enter a valid number, Your number is ${number}`;
+                return;
+            }
+            if(number === randNum){
+                result.innerText = "you won";
+                submitBtn.disabled = true;
+                match  = 1;
+            }else if(number<randNum){
+                result.innerText = "you number is smaller";
+            }
+            else{
+                result.innerText = "you number is bigger";
+            }
+            if(!match && !attempt){ result.innerText = "you lose";
+                submitBtn.disabled = true;
+            }   
+            attempt-=1;   
+            gusses.append(`${number} ,`);  
+        }           
+            
+        )
+    // }
+        
+
+    </script>
+    
+</body>
+</html>
