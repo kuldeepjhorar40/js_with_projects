@@ -12,11 +12,65 @@
         <li class="list1"><div class ="div" id = "d2">b</div></li>
         <li class="list1"><div class ="div" id = "d3">c</div></li>
         <li class="list1"><div class ="div" id = "d4">d</div></li>
-        <a href = "https://google.com" alt="google">google</a>
+        <a href = "https://google.com" alt="google"  id ="link1">google</a>
     </ul>
     <script>
-        document.querySelector(".main").addEventListener("click" , function(ev){console.log(ev);
-        });
+        // document.querySelector(".main").addEventListener("click" , function(ev){console.log(ev);
+        // });
+
+        // // 1. child to parent bubbling
+        // document.querySelector(".main").addEventListener("click" , 
+        //  function(ev){
+        // console.log("div clicked");
+        // });
+        // document.querySelector("#d3").addEventListener("click" , 
+        //  function(ev){
+        // console.log("d3 clicked");
+        // });
+
+        // // 2.parent to child bubbling
+        // document.querySelector(".main").addEventListener("click" , 
+        //  function(ev){
+        // console.log("div clicked");
+        // },true);
+        // document.querySelector("#d3").addEventListener("click" , 
+        //  function(ev){
+        // console.log("d3 clicked");
+        // },true);
+
+        //  // 3.stop bublling using stop Propagation
+        // document.querySelector(".main").addEventListener("click" , 
+        //     function(ev){
+        //         console.log("div clicked");
+        // });
+        // document.querySelector("#d3").addEventListener("click" , 
+        //     function(ev){
+        //         ev.stopPropagation();
+        //         console.log("d3 clicked");
+                
+        //     }
+        // );
+
+        // 4.PreventDefault() prevent the upcoming action until condition match 
+        // document.querySelector("#link1").addEventListener("click" , 
+        //     function(ev){
+        //         ev.preventDefault();
+        //         console.log("link clicked");
+        // });
+
+        
+        //5. task
+        // document.querySelector(".main").addEventListener("click" , 
+        //     function(ev){
+        //         console.log(ev.target.parentNode.tagName);
+                
+        //         if(ev.target.parentNode.tagName === 'LI'){
+        //             ev.target.parentNode.remove();
+        //         }
+        // });
+
+        
+        
     </script>
 </body>
 
