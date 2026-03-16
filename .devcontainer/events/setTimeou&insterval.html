@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(43, 36, 36) ; color : white;">
+    <h1 style="background-color: rgb(37, 34, 34)";>kuldeep</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+const head = document.querySelector("h1");
+const start = document.querySelector("#start");
+const stop = document.querySelector("#stop");
+const body = document.querySelector("body");
+
+// const headChange = function(el){
+//     el.innerText = "a";
+//     el.style.backgroundColor = "black";
+// }
+// let a;
+// start.addEventListener('click',function(){
+
+//     a = setTimeout(
+//         function(){
+//             headChange(head)
+//         },3000
+//     )
+// }
+// );
+
+// stop.addEventListener('click',function(){
+//     if(a){
+//         clearTimeout(a);
+//         a=null;
+//     }
+// }
+// );
+
+// let interval;
+// const randNum = function(el){
+//     el.style.backgroundColor = "black";
+//     el.innerText =Math.floor(Math.random()*100+1).toString();
+// }
+// start.addEventListener("click",function(){
+//     if(!interval){
+//         interval=setInterval(randNum,1000, head);
+//     }
+// })
+// stop.addEventListener("click",function(){
+//     if(interval){
+//         clearInterval(interval);
+//         interval = null;
+//     }
+// })
+
+
+//  ------- backgroundcolor changer ----------
+body.style.backgroundColor = "#121212";
+let interval;
+const randNum = function(el){
+    let colorChoice = "0123456789ABCDEF";
+    let color1 = "#";
+    for(let i = 0 ; i < 6 ; i++){
+        color1+=colorChoice[Math.floor(Math.random()*15)];
+    }
+
+    el.style.backgroundColor = color1;
+    
+}
+start.addEventListener("click",function(){
+    if(!interval){
+        interval=setInterval(randNum,1000, body);
+    }
+})
+stop.addEventListener("click",function(){
+    if(interval){
+        clearInterval(interval);
+        interval = null;
+    }
+})
+
+
+
+</script>
+    
+</html>
