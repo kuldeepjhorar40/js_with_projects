@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(43, 36, 36) ; color : white;">
+    
+</body>
+<script>
+    const xml1 = new XMLHttpRequest();
+    const UrlOfAPI = "https://api.github.com/users/kuldeepjhorar40";
+    xml1.open("GET" , UrlOfAPI);
+    xml1.send();
+    xml1.onreadystatechange = function(){
+        // const data  = JSON.parse(this.responseText);
+        if (xml1.readyState === 4 && xml1.status === 200) {
+            const data = JSON.parse(this.responseText);
+            console.log("Followers:", data.followers);
+        }   
+        console.log(xml1.readyState);        
+    };
+
+</script>
+</html>
