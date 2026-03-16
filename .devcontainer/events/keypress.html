@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(43, 36, 36) ; color : white;">
+    <div class="main"></div>
+
+</body>
+    <script>
+        document.querySelector(".main").style.backgroundColor = "#121212";
+        document.addEventListener("keydown" ,function(ev){
+            if(ev.key===" "){
+                document.querySelector(".main").innerText = "space";
+            }else{
+                document.querySelector(".main").innerText = ev.key;
+            }
+        });
+    </script>
+</html>
