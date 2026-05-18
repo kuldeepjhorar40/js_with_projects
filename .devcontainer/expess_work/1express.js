@@ -31,6 +31,8 @@ app.get("/home",(req,res)=>{
     // console.log("request under res of get = " , res);
     res.send("<h1>Home page</h1>");
 })
+
+
 app.use((req, res) => {
     res.status(404).send("<h1>404 - Page Not Found</h1>");
 });
