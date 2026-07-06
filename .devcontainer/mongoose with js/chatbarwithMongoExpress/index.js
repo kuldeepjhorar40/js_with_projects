@@ -7,6 +7,9 @@ const mongoose  = require('mongoose');
 
 const app = express();
 
+const methodOverride = require('method-override');
+
+
 const Chat  = require("./models/chat.js");
 
 async function main(){
@@ -25,6 +28,7 @@ main()
 const { log } = require('console');
 
 app.use(express.urlencoded({extended :true}));
+app.use(methodOverride("_method"));
 
 app.set("views",path.join(__dirname , "/views"));
 app.set("view engine","ejs");
@@ -67,6 +71,45 @@ app.post("/chat" , async (req,res) =>{
 
 });
 
+
+// ----- Edit msg ----
+
+// app.get("/chat/:id/edit" , async (req,res) =>{
+//     let {id} = req.params;
+//     let chat = await Chat.findById(id);
+//     res.render("editchat.ejs" , {chat} );
+// });
+
+// app.post("/chat/:id/edit" , async (req,res) =>{
+//     console.log("params : " , req.body);
+//     let {id} = req.params;
+//     let {newmsg} = req.body;
+//     Chat.findByIdAndUpdate(id , {msg : newmsg}).then((res) =>{
+//         console.log("updated is like :-" , res);
+//     }).catch((err) =>{
+//         console.log("err in edit route :- ",err);
+//     })
+//     res.redirect("/chat");
+
+// });
+
+app.get("/chat/:id/edit" , async (req,res) =>{
+    let {id} = req.params;
+    let chat = await Chat.findById(id);
+    res.render("editchat.ejs" , {chat} );
+});
+
+app.put("/chat/:id" , async (req,res) =>{
+    console.log("params : " , req.body);
+    let {id} = req.params;
+    let {newmsg} = req.body;
+    Chat.findByIdAndUpdate(id , {msg : newmsg}).then((res) =>{
+        console.log("updated is like :-" , res);
+    }).catch((err) =>{
+        console.log("err in edit route :- ",err);
+    })
+    res.redirect("/chat");
+});
 
 
 

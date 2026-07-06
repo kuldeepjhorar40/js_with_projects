@@ -25,6 +25,12 @@
 
                 <div style="padding:18px; background:#dcf8c6; margin:15px; border-radius:10px; font-size:17px;">
                     <%= chat.msg %>
+
+                    <div>
+                        <form method="GET" action="http://localhost:8080/chat/<%=chat._id %>/edit">
+                            <button>EDIT MSG</button>
+                        </form>
+                    </div>
                 </div>
 
                 <div style="padding:12px; text-align:right; color:#555;">
