@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chats</title>
+</head>
+
+<body style="margin:0; padding:30px; background:#ece5dd; font-family:Arial, Helvetica, sans-serif;">
+
+    <h1 style="text-align:center; color:#075e54; margin-bottom:30px;">
+        💬 All Chats
+    </h1>
+
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+        <% for(let chat of chats){ %>
+
+            <div style="width:320px; background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); overflow:hidden;">
+
+                <div style="background:#128c7e; color:white; padding:12px; font-size:18px;">
+                    <strong>From:</strong>
+                    <%= chat.from %>
+                </div>
+
+                <div style="padding:18px; background:#dcf8c6; margin:15px; border-radius:10px; font-size:17px;">
+                    <%= chat.msg %>
+                </div>
+
+                <div style="padding:12px; text-align:right; color:#555;">
+                    <strong>To:</strong>
+                    <%= chat.to %>
+                </div>
+
+            </div>
+
+        <% } %>
+
+    </div>
+    <div>
+        <form method="GET" action="http://localhost:8080/chat/new" >
+
+            <button>new</button>
+        </form>
+    </div>
+</body>
+</html>
