@@ -113,9 +113,17 @@ app.put("/chat/:id" , async (req,res) =>{
 
 
 
+// -----DELETE route
+app.delete("/chat/:id" , (req,res) =>{
+    let {id} = req.params;
+    Chat.findByIdAndDelete(id).then((data)=>{
+        console.log(data);
+    }).catch((err)=>{
+        console.log(err);
+    }) 
+    res.redirect("/chat");
 
-
-
+});
 
 
 

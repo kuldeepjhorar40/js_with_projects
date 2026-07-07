@@ -30,6 +30,11 @@
                         <form method="GET" action="http://localhost:8080/chat/<%=chat._id %>/edit">
                             <button>EDIT MSG</button>
                         </form>
+                    </div> 
+                    <div>
+                        <form method="POST" action="http://localhost:8080/chat/<%=chat._id %>?_method=DELETE">
+                            <button>DELETE MSG</button>
+                        </form>
                     </div>
                 </div>
 
