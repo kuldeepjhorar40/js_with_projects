@@ -1,9 +1,13 @@
 import  "./Product.css";
-function Product(){
+import PriceTab from  "./PriceTab.jsx";
+
+function Product({name ,features , oldPrice , newPrice}){
+    let list1 = features.map((el)=>  <li>{el}</li>);
     return (
         <div className="Product">
-            <h1>Product detail</h1>
-            <p>Product description</p>
+            <h3>{name}</h3>
+            <p>{list1}</p>
+            <PriceTab oldPrice = {oldPrice} newPrice = {newPrice}></PriceTab>
         </div>
     )
 };

@@ -1,0 +1,10 @@
+.PriceTab{
+    background-color: rgb(75, 75, 39);
+}
+.oldPrice{
+    text-decoration: line-through;
+}
+.newPrice{
+    text-decoration: solid;
+    font-weight: 200;
+}

@@ -1,5 +1,5 @@
 import ProductTab from "./ProductTab.jsx";
-
+import MsgBox from "./MsgBox.jsx";
 // // 1way
 // function App(){
 //   return <h1>hello rreact</h1>;
@@ -31,7 +31,13 @@ import ProductTab from "./ProductTab.jsx";
 
 function App(){
   return (
-    <ProductTab></ProductTab>
+    <>
+      <MsgBox username = "abc" color = "pink" />
+      <MsgBox username = "c" color = "blue" />
+      <ProductTab></ProductTab>
+
+    </>
+    
   )
 };
 
